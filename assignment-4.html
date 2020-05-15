@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head><title>Assignment-4</title>
+<script type="text/javascript">
+  window.onload = function () {
+    var chart = new CanvasJS.Chart("chartContainer",
+    {
+	  xLabel:{ text: "Overs"}, 
+      yLabel:{ text: "Runs"},
+      title:{
+      text: "Batting Statistics"
+      },
+      axisX: {
+        interval:5,
+      },
+      axisY:{
+        includeZero: true
+
+      },
+      data: [
+      {
+        type: "line",
+
+        dataPoints: [
+        { x: 5, y: 40},
+        { x: 10 , y: 75},
+        { x: 15, y: 140},
+        ]
+      }
+      ]
+    });
+    chart.render();
+  }
+  </script>
+ <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script></head>
+<body>
+<table style="border:1px solid black;">
+<tr>
+<th style="border:1px solid black;"><b>Over</b></th>
+<th style="border:1px solid black;"><b>Runs</b></th>
+</tr>
+<tr>
+<td style="border:1px solid black;"><b>5</b></td>
+<td style="border:1px solid black;"><b>40</b></td>
+</tr>
+<tr>
+<td style="border:1px solid black;"><b>10</b></td>
+<td style="border:1px solid black;"><b>75</b></td>
+</tr>
+<tr>
+<td style="border:1px solid black;"><b>15</b></td>
+<td style="border:1px solid black;"><b>140</b></td>
+</tr>
+</table>
+<br>
+ <div id="chartContainer" style="height: 300px; width: 100%;">
+  </div>
+</body>
+</html>
